@@ -11,7 +11,9 @@
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop",
     "editor.formatOnSave": true,
-    "editor.rulers": [80]
+    "editor.rulers": [80],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
   },
   "latex-workshop.latex.recipes": [
     {
