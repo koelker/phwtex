@@ -84,7 +84,7 @@ Bei Abkürzungen ist zwischen Akronymen und Abkürzungen zu unterscheiden. Ein A
 
 In `acronyms.tex` sollten lediglich Akronyme definiert werden, also Abkürzungen, die aus den Anfangsbuchstaben mehrerer Wörter gebildet werden. Alle anderen Abkürzungen sind in `commands.tex` zu definieren.
 
-> [!NOTE] Beispiel
+> [!NOTE]
 > **LaTeX**: Ein \gls{API} kann \zB als Schnittstelle implementiert werden. \
 > **PDF**: Ein Application Programming Interface (API) kann z.B. als Schnittstelle implementiert werden.
 
@@ -109,10 +109,10 @@ Hier sind einige Beispiele:
 | `\textcite{key}`  | Doe [1]                    | \textcite{doe:2020}  |
 | `\footcite{key}`  | $^1$ <Vermerk in Fußzeile> | \footcite{doe:2020}  |
 
->[!NOTE] Zitierstil
+>[!NOTE]
 > Der Zitierstil hat ebenfalls Einfluss darauf, wie die Ausgabe der Zitate aussieht. Bei anderen Stilen sieht `\cite{key}` z.B. anders aus als `\parencite{key}`. 
 
->[!NOTE] Seitenangaben
+>[!NOTE]
 > Du kannst auch Seitenangaben zu deinen Zitaten hinzufügen, indem du optionale Argumente verwendest. Zum Beispiel: `\cite[42]{doe:2020}` oder `\cite[40--42]{doe:2020}`. Die "S. " Präfix wird automatisch hinzugefügt. Schreibst du dort aber etwas anderes als Zahlen oder Zahlenbereiche hin, wird kein Präfix hinzugefügt.
 
 ### Tabellen, Abbildungen und Listings
@@ -188,7 +188,7 @@ Dasselbe Paket, das den `\todo`-Befehl bereitstellt, stellt auch einen `\missing
 
 Für alle Todos und fehlenden Abbildungen wird automatisch ein Inhaltsverzeichnis erstellt, das am Anfang des Dokuments mit dem Befehl `\listoftodos` einfügt ist.
 
-> [!WARNING] Beachte
+> [!WARNING]
 > Vergiss nicht, alle Todos und fehlenden Abbildungen zu entfernen, bevor du deine Arbeit einreichst! Außerdem musst du die `\listoftodos`-Anweisung in `main.tex` auskommentieren oder entfernen, da sonst das Inhaltsverzeichnis der Todos mit in die Arbeit aufgenommen wird - auch wenn es leer ist.
 
 ```diff
