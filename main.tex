@@ -1,0 +1,66 @@
+\documentclass[
+  12pt,
+  a4paper,
+  oneside,
+  singlespacing=true,
+  headings=big,
+  bibliography=totoc,
+  listof=totoc,
+  numbers=noenddot
+]{scrartcl}
+
+\input{packages}
+\input{meta}
+
+\begin{document}
+\input{commands}
+
+% ------------------ ToDo Notes --------------------
+% Auskommentieren vor der Abgabe!
+\listoftodos
+\clearpage
+
+% ------------------ Titelseite ---------------------
+\input{titlepage}
+\clearpage
+
+% ------------------ Frontmatter -------------------
+\pagenumbering{Roman}
+
+\printglossary[type=\acronymtype,nonumberlist,title=Abkürzungsverzeichnis]
+\clearpage
+
+\tableofcontents
+\clearpage
+
+% ------------------ Hauptteil ---------------------
+\pagenumbering{arabic}
+
+\input{content}
+
+% ------------------ Weitere Verzeichnisse ---------------------
+\clearpage
+\pagenumbering{roman}
+
+\clearpage
+\listoffigures
+
+\clearpage
+\listoftables
+
+\clearpage
+\renewcommand{\listoflistingscaption}{Listingsverzeichnis}
+\listoflistings
+
+\clearpage
+\printbibliography[title=Literaturverzeichnis]
+\clearpage
+
+\input{statutory-declaration}
+
+% ------------------ Anhang ------------------------
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\appendix
+\input{appendix}
+
+\end{document}

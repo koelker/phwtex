@@ -1,0 +1,26 @@
+% Einfügen von Tabellen, Abbildungen und Listings
+\newcommand{\tabelle}[1]{\input{tables/#1}}
+\newcommand{\abbildung}[1]{\input{figures/#1}}
+\newcommand{\code}[1]{\input{listings/#1}}
+
+% Gebräuchliche Abkürzungen
+\newcommand{\zB}{z.\,B.\@\xspace}      % zum Beispiel
+\newcommand{\bzw}{bzw.\@\xspace}       % beziehungsweise
+\newcommand{\usw}{usw.\@\xspace}       % und so weiter
+\newcommand{\ua}{u.\,a.\@\xspace}      % unter anderem
+\newcommand{\uU}{u.\,U.\@\xspace}      % unter Umständen
+\newcommand{\dH}{d.\,h.\@\xspace}      % das heißt
+\newcommand{\vgl}{vgl.\@\xspace}       % vergleiche
+\newcommand{\ca}{ca.\@\xspace}         % circa
+\newcommand{\evtl}{evtl.\@\xspace}     % eventuell
+\newcommand{\bspw}{bspw.\@\xspace}     % beispielsweise
+\newcommand{\sog}{sog.\@\xspace}       % sogenannt
+\newcommand{\va}{v.\,a.\@\xspace}        % "vor allem"
+\newcommand{\zT}{z.\,T.\@\xspace}        % "zum Teil"
+\newcommand{\seite}{S.\@\xspace}    % Seite
+
+% Referenzierung
+\newcommand{\anhang}[2]{%
+  \cref{#2}%
+  ~(Anhang~\ref{#1} auf Seite~\pageref{#2})\@\xspace%
+}
