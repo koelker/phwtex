@@ -3,7 +3,7 @@
 
 ## Installation
 
-### Mit Docker (empfohlen)
+### Mit Docker
 1. Installiere [Visual Studio Code](https://code.visualstudio.com/)
 2. Installiere [Docker](https://www.docker.com/get-started/)
 3. Führe `docker pull texlive/texlive:latest` in der Kommandozeile aus, um das LaTeX Docker-Image herunterzuladen (das kann etwas dauern)
@@ -11,7 +11,7 @@
 5. Öffne den Ordner in Visual Studio Code
 6. Installiere die [LaTeX Workshop Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 7. Nehme eine Anpassung in `chapters/01_Einleitung.tex` vor, speichere die Datei und klicke auf den grünen Pfeil in der oberen Leiste (*Build LaTeX project*)
-8. Öffne `build/main.pdf` und überpüfe das Ergebnis
+8. Öffne `build/main.pdf` und überprüfe das Ergebnis
 
 ### Ohne Docker
 
@@ -31,7 +31,7 @@ Firmenrechner am I right (～￣▽￣)～
 ```
 
 8. Nehme eine Anpassung in `chapters/01_Einleitung.tex` vor, speichere die Datei und klicke auf den grünen Pfeil in der oberen Leiste (*Build LaTeX project*)
-9. Öffne `build/main.pdf` und überpüfe das Ergebnis
+9. Öffne `build/main.pdf` und überprüfe das Ergebnis
 
 ---
 
@@ -60,7 +60,7 @@ Wenn sich irgendwer die Mühe machen will das aufzusetzen, immer her damit.
 
 An sich ist der Aufbau der Vorlage recht simpel. Schau' dir am besten einfach mal die einzelnen Dateien der Vorlage an.
 
-Text schreiben wirst du hauptsächlich in den Kapiteln im `chapters/`-Verzeichnis. Wenn du ein Kapitel hinzufügt oder entfernst, musst du auch `content.tex` anpassen, da dort die Kapitel eingebunden werden.
+Text schreiben wirst du hauptsächlich in den Kapiteln im `chapters/`-Verzeichnis. Wenn du ein Kapitel hinzufügst oder entfernst, musst du auch `content.tex` anpassen, da dort die Kapitel eingebunden werden.
 
 ### Dateien und Verzeichnisse
 
@@ -88,7 +88,7 @@ In `acronyms.tex` sollten lediglich Akronyme definiert werden, also Abkürzungen
 > **LaTeX**: Ein \gls{API} kann \zB als Schnittstelle implementiert werden. \
 > **PDF**: Ein Application Programming Interface (API) kann z.B. als Schnittstelle implementiert werden.
 
-Ferner werden Akronyme automatisch beim ersten Vorkommen ausgeschrieben und mit der Abkürzung in Klammern versehen. Alle weiteren Vorkommen werden dann nur noch mit der Abkürzung dargestellt. Akronyme werden auch mit einem Eintrag im Abkürzungsverzeichnis aufgeführt, während andere Abkürzungen nicht im Abkürzungsverzeichnis auftauchen. Klignt komisch, ist aber so.
+Ferner werden Akronyme automatisch beim ersten Vorkommen ausgeschrieben und mit der Abkürzung in Klammern versehen. Alle weiteren Vorkommen werden dann nur noch mit der Abkürzung dargestellt. Akronyme werden auch mit einem Eintrag im Abkürzungsverzeichnis aufgeführt, während andere Abkürzungen nicht im Abkürzungsverzeichnis auftauchen. Klingt komisch, ist aber so.
 
 ### Quellenangaben
 
@@ -117,7 +117,7 @@ Hier sind einige Beispiele:
 
 ### Tabellen, Abbildungen und Listings
 
-Tabellen, Abbildungen und Quellcode-Listings sollten in den entsprechenden Verzeichnissen `tables/`, `figures/` und `assets/` abgelegt werden. In den Kapiteln kannst du sie dann mit den zugehörigen Befehlen einbinden:
+Tabellen, Abbildungen und Quellcode-Listings sollten in den entsprechenden Verzeichnissen `tables/`, `figures/` und `listings/` abgelegt werden. In den Kapiteln kannst du sie dann mit den zugehörigen Befehlen einbinden:
 
 | Element   | Befehl                  | Beispiel                                                                                       |
 | --------- | ----------------------- | ---------------------------------------------------------------------------------------------- |
@@ -176,7 +176,7 @@ Für die Eidesstattliche Erklärung benötigst du eine Unterschrift. Die Vorlage
 
 ### Todos
 
-Du kannst du `\todo`-Befehl verwenden, um Anmerkungen in deinem LaTeX-Dokument zu hinterlassen. Diese Anmerkungen werden im PDF als farbige Boxen angezeigt und helfen dir, wichtige Punkte oder Aufgaben zu markieren, die du später bearbeiten möchtest.
+Du kannst den `\todo`-Befehl verwenden, um Anmerkungen in deinem LaTeX-Dokument zu hinterlassen. Diese Anmerkungen werden im PDF als farbige Boxen angezeigt und helfen dir, wichtige Punkte oder Aufgaben zu markieren, die du später bearbeiten möchtest.
 
 Beispiel:
 
@@ -186,7 +186,7 @@ Wie in Abbildung \cref{fig:mein_bild} zu sehen ist, \todo{Hier noch genauer erkl
 
 Dasselbe Paket, das den `\todo`-Befehl bereitstellt, stellt auch einen `\missingfigure`-Befehl zur Verfügung, mit dem du Platzhalter für Abbildungen einfügen kannst, die du später hinzufügen möchtest.
 
-Für alle Todos und fehlenden Abbildungen wird automatisch ein Inhaltsverzeichnis erstellt, das am Anfang des Dokuments mit dem Befehl `\listoftodos` einfügt ist.
+Für alle Todos und fehlenden Abbildungen wird automatisch ein Inhaltsverzeichnis erstellt, das am Anfang des Dokuments mit dem Befehl `\listoftodos` eingefügt ist.
 
 > [!WARNING]
 > Vergiss nicht, alle Todos und fehlenden Abbildungen zu entfernen, bevor du deine Arbeit einreichst! Außerdem musst du die `\listoftodos`-Anweisung in `main.tex` auskommentieren oder entfernen, da sonst das Inhaltsverzeichnis der Todos mit in die Arbeit aufgenommen wird - auch wenn es leer ist.
