@@ -11,7 +11,6 @@
 
 \input{meta}
 \input{packages}
-\input{meta}
 
 \begin{document}
 \input{commands}
@@ -50,13 +49,13 @@
 \listoftables
 
 \clearpage
-\renewcommand{\listoflistingscaption}{Listingsverzeichnis}
-\listoflistings
+\renewcommand*{\lstlistlistingname}{Listingverzeichnis}
+\lstlistoflistings
 
 \clearpage
 \printbibliography[title=Literaturverzeichnis]
-\clearpage
 
+\clearpage
 \input{statutory-declaration}
 
 % ------------------ Anhang ------------------------

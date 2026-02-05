@@ -199,3 +199,11 @@ Für alle Todos und fehlenden Abbildungen wird automatisch ein Inhaltsverzeichni
 + % \listoftodos
 + % \clearpage
 ```
+
+### Listings
+
+Wie du Listings einfügst habe ich bereits weiter oben erklärt. Hier geht es darum, wie du weitere Sprachen hinzufügen kannst, die von `listings` nicht standardmäßig unterstützt werden.
+Eine Liste standardmäßig unterstützter Sprachen findest du in der [listings Dokumentation](https://ctan.project-creative.net/macros/latex/contrib/listings/listings.pdf).
+
+Wenn du eine Sprache einfügen möchtest, die nicht standardmäßig unterstützt wird, musst du diese selbst definieren. Das machst du in `packages.tex` mit dem Befehl `\lstdefinelanguage`.
+Am einfachsten ist es, wenn du einer KI des Vertrauens den Abschnitt `Code Listings` aus `packages.tex` als Kontext gibst und sie bittest, dir die Definition für die gewünschte Sprache zu erstellen.

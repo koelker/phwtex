@@ -14,6 +14,8 @@
 \usepackage{fontspec}
 \setmainfont{XCharter}
 \setsansfont{TeX Gyre Heros}
+\setmonofont{Source Code Pro}[Scale=MatchLowercase]
+
 
 % --------------------------------------------------
 % Seitenlayout
@@ -25,6 +27,7 @@
   bottom=2cm,
 ]{geometry}
 \usepackage{scrhack}
+\usepackage{float}
 \setlength{\parindent}{0pt}
 \clubpenalty=10000
 \widowpenalty=10000
@@ -68,18 +71,33 @@
 % --------------------------------------------------
 % Code Listings
 % --------------------------------------------------
-\usepackage{minted}
-\usemintedstyle{borland}
-\setminted{
-  fontsize=\footnotesize,
-  baselinestretch=1.0,
-  breaklines=true,
-  tabsize=2,
-  mathescape=true,
-  autogobble=true,
-  linenos,
-  xleftmargin=20pt
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{bgColor}{HTML}{F7F7F7}
+\definecolor{borderColor}{HTML}{DDDDDD}
+\definecolor{keywordColor}{HTML}{005CC5}
+\definecolor{stringColor}{HTML}{032F62}
+\definecolor{commentColor}{HTML}{6A737D}
+\definecolor{numberColor}{HTML}{999999}
+\lstset{
+backgroundcolor=\color{bgColor},
+frame=single,
+float=H,
+rulecolor=\color{borderColor},
+basicstyle=\ttfamily\small,
+numbers=left,
+numberstyle=\tiny\color{numberColor},
+numbersep=8pt,
+breaklines=true,
+showstringspaces=false,
+tabsize=2,
+captionpos=b,
+literate={ä}{{\"a}}1 {ö}{{\"o}}1 {ü}{{\"u}}1 {Ä}{{\"A}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1,
+keywordstyle=\color{keywordColor}\bfseries,
+stringstyle=\color{stringColor},
+commentstyle=\color{commentColor}\ttfamily,
 }
+% hier würdest du weitere Sprachen hinzufügen
 
 % --------------------------------------------------
 % Mathematik
