@@ -1,0 +1,113 @@
+# ─────────────────────────────────────────────────────────────────
+# Based on defaultSettings.yaml from latexindent.pl v3.24.7
+# https://github.com/cmhughes/latexindent.pl
+# ─────────────────────────────────────────────────────────────────
+
+# === Backup safety ================================================
+onlyOneBackUp: 0
+maxNumberOfBackUps: 3
+cycleThroughBackUps: 1
+
+# === Indentation ==================================================
+defaultIndent: "  " # two spaces (novel prose)
+
+removeTrailingWhitespace:
+  beforeProcessing: 1
+  afterProcessing: 1
+
+# === Verbatim — leave these untouched =============================
+# (defaults are fine; listing here for explicitness)
+verbatimEnvironments:
+  verbatim: 1
+  lstlisting: 1
+  minted: 1
+
+verbatimCommands:
+  verb: 1
+  lstinline: 1
+
+# === Environments with alignment delimiters =======================
+lookForAlignDelims:
+  tabular:
+    delims: 1
+    alignDoubleBackSlash: 1
+    spacesBeforeDoubleBackSlash: 1
+  tabularx:
+    delims: 1
+  longtable:
+    delims: 1
+  array:
+    delims: 1
+  matrix:
+    delims: 1
+  bmatrix:
+    delims: 1
+  pmatrix:
+    delims: 1
+
+# === Line break modification =====================================
+modifyLineBreaks:
+  preserveBlankLines: 1
+  condenseMultipleBlankLinesInto: 1
+
+  # ── One sentence per line (the main feature) ──────────────────
+  oneSentencePerLine:
+    manipulateSentences: 1 # ← turned ON (default is 0)
+    removeSentenceLineBreaks: 1 # join broken sentences into one line
+    multipleSpacesToSingle: 1 # collapse runs of spaces
+    textWrapSentences: 0 # no hard-wrap on sentences
+    sentenceIndent: "" # no extra indent for continuation
+
+    # What can precede a sentence
+    sentencesFollow:
+      par: 1
+      blankLine: 1
+      fullStop: 1
+      exclamationMark: 1
+      questionMark: 1
+      rightBrace: 1
+      commentOnPreviousLine: 1
+      other: 0
+
+    # What character a sentence starts with
+    sentencesBeginWith:
+      A-Z: 1 # capital letters
+      a-z: 0 # ignore lowercase starts
+      other: 0
+
+    # What character ends a sentence
+    sentencesEndWith:
+      basicFullStop: 0 # off — betterFullStop is superior
+      betterFullStop: 1 # handles e.g., i.e., etc. correctly
+      exclamationMark: 1
+      questionMark: 1
+      other: 0
+
+    # Patterns that should NOT appear inside a sentence
+    # (prevents mangling environments mid-sentence)
+    sentencesDoNOTcontain:
+      other: \\begin|\\end
+
+  # ── Text wrapping (disabled — novels are free-flowing) ────────
+  textWrapOptions:
+    columns: 0 # 0 = disabled
+    multipleSpacesToSingle: 1
+    removeBlockLineBreaks: 1
+    when: before
+    comments:
+      wrap: 0
+
+# === Preamble =====================================================
+indentPreamble: 0 # don't touch the preamble
+
+lookForPreamble:
+  .tex: 1
+  .sty: 0
+  .cls: 0
+  .bib: 0
+
+# === Log file preferences ========================================
+logFilePreferences:
+  showEveryYamlRead: 1
+  showAmalgamatedSettings: 0
+  endLogFileWith: "--------------"

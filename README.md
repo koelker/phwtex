@@ -50,9 +50,56 @@ Dadurch wird der Build-Prozess jedes Mal gestartet, wenn du eine Datei speichers
 
 ## Formatierung
 
-Beim Speichern einer `.tex`-Datei wird diese mit `latexindent` automatisch formatiert. Da `latexindent` ein pain in the ass ist aufzusetzen, habe ich mich nach viel Herumprobieren dazu entschieden, einfach die Default-Config zu verwenden. Das heißt leider, dass die single-sentence per line Regel nicht umgesetzt wird. Dafür werden Tabellen aber schön getabbt (✿◠‿◠).
+### latexindent
 
-Wenn sich irgendwer die Mühe machen will das aufzusetzen, immer her damit.
+Beim Speichern einer `.tex`-Datei wird diese mit `latexindent` automatisch formatiert. Für alle Dateien in `chapters/` wird die `latexindent.yaml`-Konfigurationsdatei verwendet, welche bereits so voreingestellt ist, dass pro Zeile immer nur ein Satz steht. Alle anderen Dateien werden mit den Standardeinstellungen von `latexindent` formatiert.
+
+Die Konfigurationsdatei kann nach Belieben angepasst werden. Seid euch aber bewusst, dass die Konfiguration von `latexindent` ziemlich komplex ist und (zumindest für mich) nicht ganz verständlich ist. Am Ende stellt sich immer die Frage, ob man die Zeit da wirklich investieren sollte, um die perfekte Formatierung zu erreichen, oder man mit den Standardeinstellungen zufrieden ist, die ja auch schon eine ordentliche Formatierung liefern.
+
+The decision is yours (^◕.◕^).
+
+### Ruler
+
+Standardmäßig habe ich in `.vscode/settings.json` folgende Einstellungen für `.tex`-Dateien vorgenommen:
+
+```diff
+"[latex]": {
+  "editor.defaultFormatter": "James-Yu.latex-workshop",
+  "editor.formatOnSave": true,
++  "editor.rulers": [140],
++  "editor.wordWrap": "wordWrapColumn",
++  "editor.wordWrapColumn": 140
+},
+```
+
+Relevant sind hier die letzen drei Zeilen, die einen Ruler bei 140 Zeichen setzen und die Zeilen automatisch umbrechen, wenn sie länger als 140 Zeichen sind. Das ist natürlich Geschmackssache, aber ich finde es ganz angenehm, um einen Überblick über die Zeilenlänge zu behalten und nicht so lange Zeilen zu haben.
+Das sorgt dafür, dass eine Zeile in VS Code dann visuell zu zwei Zeilen wird, wenn sie länger als 140 Zeichen ist:
+
+<!-- add two images right next to each other -->
+<div style="display: flex; gap: 20px;">
+  <div style="width: 50%;">
+    <img src="assets/editor-with-rulers.png" alt="Editor mit Ruler" style="width: 100%; image-rendering: crisp-edges;">
+    <p style="text-align: center; margin-top: 10px;"><em>Editor mit Ruler</em></p>
+  </div>
+  <div style="width: 50%;">
+    <img src="assets/editor-without-rulers.png" alt="Editor ohne Ruler" style="width: 100%; image-rendering: crisp-edges;">
+    <p style="text-align: center; margin-top: 10px;"><em>Editor ohne Ruler</em></p>
+  </div>
+</div>
+
+Passe den Wert (hier standardmäßig bei `140`) so an, dass es bei deiner Bildschirmgröße mit der Schriftgröße fast am rechten Rand des Editors liegt.
+
+Ich persönlich empfine es als extrem störend, wenn ein Satz sehr lang ist und ich immer rauszoomen muss, um ihn ganz zu sehen. Deshalb einfach die Ruler aktivieren und die Zeilen umbrechen lassen, wenn sie zu lang werden. Wenn dich das stört, einfach die Zeilen auskommentieren oder entfernen:
+
+```diff
+"[latex]": {
+  "editor.defaultFormatter": "James-Yu.latex-workshop",
+  "editor.formatOnSave": true,
+-  "editor.rulers": [140],
+-  "editor.wordWrap": "wordWrapColumn",
+-  "editor.wordWrapColumn": 140
+},
+```
 
 ---
 

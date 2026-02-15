@@ -11,10 +11,18 @@
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop",
     "editor.formatOnSave": true,
-    "editor.rulers": [80],
+    "editor.rulers": [140],
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 80
+    "editor.wordWrapColumn": 140
   },
+  "latex-workshop.formatting.latexindent.args": [
+    "-c",
+    "%DIR%/",
+    "%TMPFILE%",
+    "-l",
+    "-m",
+    "-y=defaultIndent: '%INDENT%'"
+  ],
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk (lualatex)",
