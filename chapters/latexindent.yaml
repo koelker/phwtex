@@ -9,7 +9,7 @@ maxNumberOfBackUps: 3
 cycleThroughBackUps: 1
 
 # === Indentation ==================================================
-defaultIndent: "  " # two spaces (novel prose)
+defaultIndent: "\t"
 
 removeTrailingWhitespace:
   beforeProcessing: 1
@@ -88,7 +88,7 @@ modifyLineBreaks:
     sentencesDoNOTcontain:
       other: \\begin|\\end
 
-  # ── Text wrapping (disabled — novels are free-flowing) ────────
+  # ── Text wrapping ────────
   textWrapOptions:
     columns: 0 # 0 = disabled
     multipleSpacesToSingle: 1
