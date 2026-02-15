@@ -208,7 +208,7 @@ wird zu
 | Unterabschnitt      | `subsec:`       | `\label{subsec:motivation}`  |
 | Unterunterabschnitt | `subsubsec:`    | `\label{subsubsec:beispiel}` |
 | Abbildung           | `fig:`          | `\label{fig:mein_bild}`      |
-| Tabelle             | `tab:`          | `\label{tab:meine_tabelle`   |
+| Tabelle             | `tab:`          | `\label{tab:meine_tabelle}`  |
 | Listing             | `lst:`          | `\label{lst:mein_code}`      |
 | Gleichung           | `eq:`           | `\label{eq:meine_gleichung}` |
 | Anhang              | `app:`          | `\label{app:mein_anhang}`    |
